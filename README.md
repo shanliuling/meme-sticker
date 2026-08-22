@@ -1,5 +1,7 @@
 # MemeSticker
 
+English | [简体中文](./README.zh-CN.md)
+
 Turn one uploaded image into a complete 12-piece AI sticker pack.
 
 ## Quick start
