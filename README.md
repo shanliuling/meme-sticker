@@ -1,83 +1,78 @@
-# MemeSticker
+<div align="center">
 
-English | [简体中文](./README.zh-CN.md)
+# MemeSticker 🐾
 
-Turn one uploaded image into a complete 12-piece AI sticker pack.
+### One image in, 12 usable stickers out.
 
-## Quick start
+**Turn pets, selfies, characters, toys — almost anything — into a complete AI chat sticker pack.**
 
-Clone or copy this folder into your host's skills directory, attach an image,
-and ask: `Turn this into a 12-piece sticker pack.` The host must support image
-generation; Python 3.10+ is required for extracting and packaging the stickers.
+一张图进去，12 张能用的表情包出来。
 
-## Core idea
-This version fixes the production path to **2 sheets × 6 stickers**:
-- Sheet A: 3 columns × 2 rows = 6 stickers
-- Sheet B: 3 columns × 2 rows = 6 stickers
-- Final output: 12 transparent PNG stickers + combined preview + ZIP
+[![skills.sh](https://skills.sh/b/shanliuling/meme-sticker)](https://skills.sh/shanliuling/meme-sticker)
+[![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
-This is a better compromise than:
-- 1 big 12-grid sheet (too hard to extract cleanly)
-- 12 independent generations (too slow / too inconsistent)
+**English** · [简体中文](./README.zh-CN.md)
 
-## Included files
-- `SKILL.md` — the skill instructions for the agent
-- `references/generation-guide.md` — generation contract for each 3x2 sheet
-- `scripts/sticker_sheet_lib.py` — reusable extraction logic
-- `scripts/extract_sticker_sheet.py` — per-sheet extractor for a 3x2 sticker sheet
-- `scripts/package_sticker_pack.py` — combines two extracted sheets into one 12-pack ZIP
-- `scripts/requirements.txt` — Python dependencies
+</div>
 
-## Runtime preparation
+---
 
-The skill requires **Python 3.10+**. It tries `python`, `py -3`, and `python3` on Windows, or `python3` and `python` on macOS/Linux, and verifies that the selected interpreter is Python 3.10 or newer.
+## ✨ Not just a sticker sheet
 
+Most AI image tools stop after generating one big sticker sheet.
 
-Before checking packages, the agent verifies the Python version with:
+**MemeSticker goes one step further.** It generates the set, separates every sticker, removes the key background, cleans edge color spill, normalizes the canvas, and packages everything for you.
 
-```text
-<python-command> -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)"
-```
+You get **12 individual transparent PNG stickers**, not just one preview image.
 
-Before packaging, it checks for NumPy and Pillow:
+- 🎨 AI-generated reactions, captions, poses, and decorations
+- ✂️ Automatic sticker extraction
+- 🪄 Transparent background + edge cleanup
+- 📐 Consistent 512 × 512 output
+- 📦 Preview + ready-to-use ZIP
+- ⚡ Only 2 image generations for the full 12-piece pack
 
-```text
-<python-command> -c "import numpy, PIL"
-```
+---
 
-If either dependency is missing, the skill automatically installs the bundled
-requirements with the same interpreter:
+## ⚡ 30 seconds to start
 
-```text
-<python-command> -m pip install -r "scripts/requirements.txt"
-```
-
-## Main tool call
-
-The packaging command is intentionally shown on one line so it can be adapted to
-PowerShell, Command Prompt, Bash, or zsh without shell-specific continuation
-characters.
-
-### Windows PowerShell
-
-```powershell
-python scripts/package_sticker_pack.py --sheet-a "C:\path\to\sheet-a.png" --sheet-b "C:\path\to\sheet-b.png" --output-dir "C:\path\to\output"
-```
-
-If `python` is unavailable, use `py -3` instead.
-
-### macOS or Linux
+Install with the open Agent Skills CLI:
 
 ```bash
-python3 scripts/package_sticker_pack.py --sheet-a "/abs/path/sheet-a.png" --sheet-b "/abs/path/sheet-b.png" --output-dir "/abs/path/output"
+npx skills add shanliuling/meme-sticker
 ```
 
+Then upload an image and simply say:
 
-## Release behavior
-Packaging includes edge cleanup and keeps the user-facing output simple. By default the output folder contains only `preview.jpg` and `sticker-pack.zip`. Intermediate Sheet A / Sheet B extraction files are stored in a hidden work directory inside the selected output directory and deleted automatically. This avoids requiring access to the operating system's temporary directory. Use `--keep-debug` only when developing or diagnosing a failed pack.
+> **Turn this into a cute sticker pack.**
 
-## User-facing output
-By default the output directory is intentionally minimal:
+Or be more specific:
+
+> Make 12 sarcastic reaction stickers from this character.
+
+> Turn this pet photo into a work-chat meme pack.
+
+> 把这张图做成一套打工人表情包。
+
+> 给这个角色做一套可爱聊天贴纸。
+
+No need to write 12 prompts manually. MemeSticker plans the full reaction set for you.
+
+---
+
+## 🧩 Anything can become a meme pack
+
+| 🐶 Pets | 🤳 Selfies | 🎮 Characters | 🧸 Toys & mascots |
+| --- | --- | --- | --- |
+| Dogs, cats, rabbits... | Portraits and selfies | Anime, game and OC characters | Plushies, mascots, objects |
+
+As long as the subject is visually recognizable, MemeSticker can turn it into a consistent sticker set.
+
+---
+
+## 🎁 What you get
 
 ```text
 output/
@@ -85,7 +80,7 @@ output/
 └── sticker-pack.zip
 ```
 
-The ZIP contains only:
+Inside the ZIP:
 
 ```text
 sticker-pack.zip
@@ -97,4 +92,100 @@ sticker-pack.zip
     └── 12.png
 ```
 
-Use `--keep-debug` only when developing or diagnosing extraction problems.
+Each sticker is exported as an individual transparent PNG, ready for you to import into the messaging app or workflow of your choice.
+
+---
+
+## 🧠 Why 2 × 6?
+
+MemeSticker uses a fixed production strategy:
+
+```text
+1 source image
+      ↓
+Sheet A · 6 stickers
+      +
+Sheet B · 6 stickers
+      ↓
+Automatic extraction
+      ↓
+Background removal + edge cleanup
+      ↓
+12 transparent PNGs
+      ↓
+Preview + ZIP
+```
+
+Why not one giant 12-grid image? It is harder to separate cleanly and gives each sticker less room.
+
+Why not generate 12 images one by one? It is slower and character/style consistency drifts more easily.
+
+**2 × 6 is the practical middle ground: fast enough, consistent enough, and much easier to extract cleanly.**
+
+---
+
+## 📦 Manual installation
+
+If you do not use the `skills` CLI, clone this repository and copy the folder into your agent's skills directory:
+
+```bash
+git clone https://github.com/shanliuling/meme-sticker.git
+```
+
+The host agent must support **image generation or image editing**. MemeSticker uses the host's image model to create the sticker sheets, while the bundled Python scripts handle extraction, transparency cleanup, normalization, and packaging.
+
+---
+
+## ⚙️ Requirements
+
+- Agent Skills-compatible host
+- Image generation / image editing capability
+- Python **3.10+**
+- NumPy and Pillow
+
+If NumPy or Pillow is missing, the skill can install the required packages from `scripts/requirements.txt` using the selected Python interpreter. Network / pip access may therefore be required on first run.
+
+---
+
+## 🛠 What's inside
+
+```text
+meme-sticker/
+├── SKILL.md
+├── README.md
+├── README.zh-CN.md
+├── references/
+│   └── generation-guide.md
+└── scripts/
+    ├── package_sticker_pack.py
+    ├── extract_sticker_sheet.py
+    ├── sticker_sheet_lib.py
+    └── requirements.txt
+```
+
+The image model owns the creative work: captions, typography, poses, expressions, and decorations.
+
+The Python tools only handle the deterministic production work: splitting, background extraction, de-spill, normalization, preview generation, and ZIP packaging.
+
+---
+
+## ⚠️ Limitations
+
+- Character consistency still depends on the host image model.
+- AI-generated text may occasionally contain spelling errors.
+- Very complex subjects or backgrounds can reduce extraction quality.
+- MemeSticker outputs standard transparent PNG files; importing them into WeChat, QQ, Telegram, or other apps is handled by the user.
+
+---
+
+## ❤️ Why this exists
+
+AI can already make great sticker sheets. The annoying part is everything after that: cropping, removing backgrounds, fixing ugly color spill, resizing, and exporting every sticker one by one.
+
+**MemeSticker turns that whole process into one reusable Agent Skill.**
+
+If you find it useful, a ⭐ helps more people discover the project.
+
+## 📄 License
+
+MIT © MemeSticker contributors
