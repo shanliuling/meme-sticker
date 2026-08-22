@@ -16,7 +16,7 @@
 
 <br/>
 
-<img src="./assets/hero.png" width="900" alt="MemeSticker — one image to a 12-piece sticker pack" />
+<img src="./assets/hero-en.jpg" width="900" alt="MemeSticker — one image to a 12-piece sticker pack" />
 
 </div>
 
@@ -81,7 +81,7 @@ No need to write 12 prompts manually. MemeSticker plans the full set for you.
 Most AI workflows stop at one big 12-grid image. MemeSticker keeps going: it extracts each sticker, removes the background, cleans the edges, normalizes the canvas, and packages the final files.
 
 <p align="center">
-  <img src="./assets/not-just-a-sheet.png" width="820" alt="Sticker sheet versus 12 usable transparent stickers" />
+  <img src="./assets/not-just-a-sheet-en.jpg" width="820" alt="Sticker sheet versus 12 usable transparent stickers" />
 </p>
 
 ---
@@ -95,7 +95,7 @@ MemeSticker uses **two 3×2 generations** instead of one crowded 12-grid or twel
 - **2 × 6** → a practical balance of speed, consistency and clean extraction
 
 <p align="center">
-  <img src="./assets/workflow-2x6.png" width="900" alt="MemeSticker 2x6 workflow" />
+  <img src="./assets/workflow-en.jpg" width="900" alt="MemeSticker 2x6 workflow" />
 </p>
 
 ---
