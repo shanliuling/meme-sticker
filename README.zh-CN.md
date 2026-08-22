@@ -12,6 +12,8 @@
 
 **宠物、自拍、角色、玩偶，几乎任何主体都能变成一整套 AI 聊天表情。**
 
+⚡ **无需逐张生成：一次生图即可完成整套表情包，更省生图额度。**
+
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)

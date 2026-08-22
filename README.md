@@ -12,6 +12,8 @@
 
 **Turn pets, selfies, characters, toys — almost anything — into a complete AI chat sticker pack.**
 
+⚡ **No sticker-by-sticker generation: one image call produces a complete sticker pack while using fewer generation credits.**
+
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
