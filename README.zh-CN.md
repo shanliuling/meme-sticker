@@ -1,90 +1,78 @@
-# MemeSticker
+<div align="center">
 
-[English](./README.md) | 简体中文
+# MemeSticker 🐾
 
-将一张宠物、自拍、角色或任意主体图片，变成一套完整的 12 张 AI 聊天表情包。
+### 一张图进去，12 张能用的表情包出来。
 
-## 快速开始
+**宠物、自拍、角色、玩偶，几乎任何主体都能变成一整套 AI 聊天表情。**
 
-将本仓库克隆或复制到宿主的 Skills 目录，上传一张图片，然后告诉智能体：
-`把这张图做成一套 12 张的聊天表情包。`
+One image in, 12 usable stickers out.
 
-宿主必须具备图片生成能力；表情拆分与打包需要 Python 3.10+。
+[![skills.sh](https://skills.sh/b/shanliuling/meme-sticker)](https://skills.sh/shanliuling/meme-sticker)
+[![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
-## 核心方案
+[English](./README.md) · **简体中文**
 
-本 Skill 固定采用 **2 张大图 × 每张 6 个表情** 的生成流程：
+</div>
 
-- A 图：3 列 × 2 行，共 6 个表情
-- B 图：3 列 × 2 行，共 6 个表情
-- 最终输出：12 张透明 PNG 表情 + 合集预览图 + ZIP 压缩包
+---
 
-这是生成速度、角色一致性和切图质量之间更稳妥的折中方案：
+## ✨ 不只是一张表情包大图
 
-- 不使用一张包含 12 个表情的大网格图，因为难以稳定切分
-- 不逐张生成 12 次，因为速度慢且角色风格容易漂移
+很多 AI 生图工具做到这里就结束了：生成一张 12 宫格表情包大图。
 
-## 文件说明
+**MemeSticker 会继续把后面的脏活也做完。**
 
-- `SKILL.md` — 智能体执行本 Skill 时遵循的完整说明
-- `references/generation-guide.md` — 每张 3×2 表情大图的生成规范
-- `scripts/sticker_sheet_lib.py` — 可复用的表情提取处理逻辑
-- `scripts/extract_sticker_sheet.py` — 将一张 3×2 大图拆成 6 张表情
-- `scripts/package_sticker_pack.py` — 合并两组结果并生成 12 张表情包 ZIP
-- `scripts/requirements.txt` — Python 依赖
+它会自动生成整套表情、拆分每一张、去掉色键背景、清理边缘溢色、统一尺寸，最后直接打包。
 
-## 运行环境准备
+最终拿到的是 **12 张独立透明 PNG**，不是只有一张预览图。
 
-本 Skill 需要 **Python 3.10+**。在 Windows 上会依次尝试 `python`、
-`py -3` 和 `python3`；在 macOS/Linux 上会依次尝试 `python3` 和
-`python`，并检查解释器版本是否符合要求。
+- 🎨 AI 自动设计表情、文案、动作和小装饰
+- ✂️ 自动识别并拆分每张表情
+- 🪄 自动去背景 + 边缘清理 / de-spill
+- 📐 默认统一为 512 × 512
+- 📦 自动生成合集预览 + ZIP
+- ⚡ 整套 12 张只需要 2 次生图
 
-智能体会先验证 Python 版本：
+---
 
-```text
-<python-command> -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)"
-```
+## ⚡ 30 秒开始
 
-打包前会检查 NumPy 和 Pillow：
-
-```text
-<python-command> -c "import numpy, PIL"
-```
-
-如果依赖缺失，Skill 会使用同一个 Python 解释器自动安装仓库内的依赖：
-
-```text
-<python-command> -m pip install -r "scripts/requirements.txt"
-```
-
-## 主要命令
-
-打包命令保持为单行格式，方便直接用于 PowerShell、命令提示符、Bash 或 zsh。
-
-### Windows PowerShell
-
-```powershell
-python scripts/package_sticker_pack.py --sheet-a "C:\path\to\sheet-a.png" --sheet-b "C:\path\to\sheet-b.png" --output-dir "C:\path\to\output"
-```
-
-如果无法使用 `python`，请改用 `py -3`。
-
-### macOS 或 Linux
+使用通用 Agent Skills CLI 安装：
 
 ```bash
-python3 scripts/package_sticker_pack.py --sheet-a "/abs/path/sheet-a.png" --sheet-b "/abs/path/sheet-b.png" --output-dir "/abs/path/output"
+npx skills add shanliuling/meme-sticker
 ```
 
-## 输出行为
+然后上传一张图片，直接告诉智能体：
 
-打包流程会清理表情边缘，并保持最终输出目录简洁。默认只会输出
-`preview.jpg` 和 `sticker-pack.zip`。A/B 大图的中间处理文件会保存到
-输出目录内的隐藏工作目录，并在成功后自动删除，因此不依赖操作系统的临时目录。
-只有在开发或排查失败原因时才需要使用 `--keep-debug`。
+> **把这张图做成一套表情包。**
 
-## 最终产物
+也可以指定主题：
 
-默认输出目录：
+> 把这只狗做成一套打工人表情包。
+
+> 给这个角色做 12 张阴阳怪气的聊天表情。
+
+> 把这张自拍做成可爱风微信聊天贴纸。
+
+你不需要自己准备 12 条 Prompt，MemeSticker 会自动规划整套反应和文案。
+
+---
+
+## 🧩 什么都能变成 Meme Pack
+
+| 🐶 宠物 | 🤳 自拍 / 真人 | 🎮 角色 | 🧸 玩偶 / 吉祥物 |
+| --- | --- | --- | --- |
+| 猫、狗、兔子... | 人像、自拍、朋友 | 二次元、游戏、OC | 毛绒玩具、吉祥物、物体 |
+
+只要主体足够清晰、可识别，就可以尝试做成一整套表情。
+
+---
+
+## 🎁 最终会得到什么
 
 ```text
 output/
@@ -92,7 +80,7 @@ output/
 └── sticker-pack.zip
 ```
 
-ZIP 压缩包仅包含：
+ZIP 里面是：
 
 ```text
 sticker-pack.zip
@@ -104,4 +92,102 @@ sticker-pack.zip
     └── 12.png
 ```
 
-只有在开发或诊断表情提取问题时才需要使用 `--keep-debug`。
+每张都是独立透明 PNG，可以再导入微信、QQ、Telegram 或其他聊天 / 创作工具。
+
+---
+
+## 🧠 为什么固定用 2 × 6？
+
+MemeSticker 的主流程固定为：
+
+```text
+1 张原图
+   ↓
+Sheet A · 6 张
+   +
+Sheet B · 6 张
+   ↓
+自动拆分
+   ↓
+去背景 + 边缘清理
+   ↓
+12 张透明 PNG
+   ↓
+预览图 + ZIP
+```
+
+为什么不直接生成一张 12 宫格？因为每张表情空间更小，而且更难稳定拆干净。
+
+为什么不单独生成 12 次？因为太慢，而且人物 / 角色风格更容易漂。
+
+**2 × 6 是目前更实用的平衡点：生成够快、角色更稳、后处理也更干净。**
+
+---
+
+## 📦 手动安装
+
+如果你不使用 `skills` CLI，也可以直接克隆：
+
+```bash
+git clone https://github.com/shanliuling/meme-sticker.git
+```
+
+然后把整个 `meme-sticker` 文件夹放进你的 Agent 的 Skills 目录。
+
+宿主智能体必须本身具备 **图片生成 / 图片编辑能力**。MemeSticker 使用宿主的图片模型完成创作，Python 脚本主要负责拆图、透明化、边缘清理、尺寸统一和打包。
+
+---
+
+## ⚙️ 运行要求
+
+- 支持 Agent Skills 的宿主
+- 图片生成 / 图片编辑能力
+- Python **3.10+**
+- NumPy + Pillow
+
+如果 NumPy 或 Pillow 缺失，Skill 可以根据 `scripts/requirements.txt` 自动安装，因此首次运行可能需要网络和 pip 权限。
+
+---
+
+## 🛠 项目结构
+
+```text
+meme-sticker/
+├── SKILL.md
+├── README.md
+├── README.zh-CN.md
+├── references/
+│   └── generation-guide.md
+└── scripts/
+    ├── package_sticker_pack.py
+    ├── extract_sticker_sheet.py
+    ├── sticker_sheet_lib.py
+    └── requirements.txt
+```
+
+创意部分交给图片模型：文案、字体、动作、表情、装饰。
+
+Python 只负责确定性的生产流程：切分、去背景、de-spill、尺寸统一、预览图和 ZIP 打包。
+
+---
+
+## ⚠️ 已知限制
+
+- 角色一致性仍取决于宿主使用的图片模型。
+- AI 生成文字偶尔会有错字。
+- 主体或背景过于复杂时，拆分和透明化质量可能下降。
+- MemeSticker 输出的是标准透明 PNG；导入微信、QQ、Telegram 等平台由用户自己完成。
+
+---
+
+## ❤️ 为什么做这个
+
+AI 现在已经很会画“表情包大图”了，麻烦的是后面：裁图、抠背景、修边缘、统一尺寸、逐张导出。
+
+**MemeSticker 就是把这些流程做成一个可以复用的 Agent Skill。**
+
+如果这个项目对你有用，欢迎点一个 ⭐，也方便更多人看到它。
+
+## 📄 License
+
+MIT © MemeSticker contributors
