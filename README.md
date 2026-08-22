@@ -2,6 +2,12 @@
 
 # MemeSticker 🐾
 
+<p>
+  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="13%" alt="Transparent selfie sticker saying OK" /></a>
+  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="13%" alt="Transparent cat sticker saying OK" /></a>
+  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="13%" alt="Transparent character sticker saying NICE" /></a>
+</p>
+
 ### One image in, a complete sticker pack out.
 
 **Turn pets, selfies, characters, toys — almost anything — into a complete AI chat sticker pack.**
@@ -26,12 +32,6 @@
   <a href="./assets/example-girl.jpg"><img src="./assets/example-girl.jpg" width="31%" alt="Selfie sticker example" /></a>
   <a href="./assets/example-cat.jpg"><img src="./assets/example-cat.jpg" width="31%" alt="Pet sticker example" /></a>
   <a href="./assets/example-character.jpg"><img src="./assets/example-character.jpg" width="31%" alt="Character sticker example" /></a>
-</p>
-
-<p align="center">
-  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="22%" alt="Transparent selfie sticker saying OK" /></a>
-  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="22%" alt="Transparent cat sticker saying OK" /></a>
-  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="22%" alt="Transparent character sticker saying NICE" /></a>
 </p>
 
 <div align="center">

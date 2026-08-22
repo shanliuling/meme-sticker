@@ -2,6 +2,12 @@
 
 # MemeSticker 🐾
 
+<p>
+  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="13%" alt="透明背景自拍 OK 表情" /></a>
+  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="13%" alt="透明背景猫咪 OK 表情" /></a>
+  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="13%" alt="透明背景角色 NICE 表情" /></a>
+</p>
+
 ### 一张图进去，一整套表情包出来。
 
 **宠物、自拍、角色、玩偶，几乎任何主体都能变成一整套 AI 聊天表情。**
@@ -26,12 +32,6 @@
   <a href="./assets/example-girl.jpg"><img src="./assets/example-girl.jpg" width="31%" alt="真人表情包效果" /></a>
   <a href="./assets/example-cat.jpg"><img src="./assets/example-cat.jpg" width="31%" alt="宠物表情包效果" /></a>
   <a href="./assets/example-character.jpg"><img src="./assets/example-character.jpg" width="31%" alt="角色表情包效果" /></a>
-</p>
-
-<p align="center">
-  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="22%" alt="透明背景自拍 OK 表情" /></a>
-  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="22%" alt="透明背景猫咪 OK 表情" /></a>
-  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="22%" alt="透明背景角色 NICE 表情" /></a>
 </p>
 
 <div align="center">
