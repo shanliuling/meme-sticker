@@ -3,9 +3,9 @@
 # MemeSticker 🐾
 
 <p>
-  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="13%" alt="透明背景自拍 OK 表情" /></a>
-  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="13%" alt="透明背景猫咪 OK 表情" /></a>
-  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="13%" alt="透明背景角色 NICE 表情" /></a>
+  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="18%" alt="透明背景自拍 OK 表情" /></a>
+  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="18%" alt="透明背景猫咪 OK 表情" /></a>
+  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="18%" alt="透明背景角色 NICE 表情" /></a>
 </p>
 
 ### 一张图进去，一整套表情包出来。

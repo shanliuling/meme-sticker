@@ -3,9 +3,9 @@
 # MemeSticker 🐾
 
 <p>
-  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="13%" alt="Transparent selfie sticker saying OK" /></a>
-  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="13%" alt="Transparent cat sticker saying OK" /></a>
-  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="13%" alt="Transparent character sticker saying NICE" /></a>
+  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="18%" alt="Transparent selfie sticker saying OK" /></a>
+  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="18%" alt="Transparent cat sticker saying OK" /></a>
+  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="18%" alt="Transparent character sticker saying NICE" /></a>
 </p>
 
 ### One image in, a complete sticker pack out.
