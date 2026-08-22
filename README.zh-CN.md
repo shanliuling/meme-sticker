@@ -2,11 +2,9 @@
 
 # MemeSticker 🐾
 
-### 一张图进去，12 张能用的表情包出来。
+### 一张图进去，一整套表情包出来。
 
 **宠物、自拍、角色、玩偶，几乎任何主体都能变成一整套 AI 聊天表情。**
-
-One image in, 12 usable stickers out.
 
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -16,7 +14,7 @@ One image in, 12 usable stickers out.
 
 <br/>
 
-<img src="./assets/hero.png" width="900" alt="MemeSticker 一张图生成整套表情包" />
+<img src="./assets/hero-zh.jpg" width="900" alt="MemeSticker 一张图生成整套表情包" />
 
 </div>
 
@@ -33,6 +31,8 @@ One image in, 12 usable stickers out.
 <div align="center">
 
 **自拍 · 宠物 · 二次元 / 游戏角色 · 玩偶 · 吉祥物 · 物体**
+
+**表情文案会跟随你的语言。**
 
 </div>
 
@@ -52,9 +52,9 @@ npx skills add shanliuling/meme-sticker
 
 > 把这只猫做成一套打工人表情包。
 
-> 给这个角色做 12 张阴阳怪气的聊天表情。
+> 给这个角色做一套阴阳怪气的聊天表情。
 
-成品包含一张预览图和 `sticker-pack.zip`；压缩包内是 12 张独立透明 PNG。
+成品包含一张预览图和 `sticker-pack.zip`；压缩包内是多张独立透明 PNG 表情。
 
 > [!IMPORTANT]
 > 宿主必须支持图片生成或图片编辑，并提供 Python 3.10+。首次运行可能需要安装 NumPy 和 Pillow。

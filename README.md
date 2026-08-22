@@ -2,7 +2,7 @@
 
 # MemeSticker 🐾
 
-### One image in, 12 usable stickers out.
+### One image in, a complete sticker pack out.
 
 **Turn pets, selfies, characters, toys — almost anything — into a complete AI chat sticker pack.**
 
@@ -14,7 +14,7 @@
 
 <br/>
 
-<img src="./assets/hero-en.jpg" width="900" alt="MemeSticker — one image to a 12-piece sticker pack" />
+<img src="./assets/hero-en.jpg" width="900" alt="MemeSticker — one image to a complete sticker pack" />
 
 </div>
 
@@ -32,6 +32,8 @@
 
 **Selfies · Pets · Characters · Toys · Mascots · Objects**
 
+**Captions follow your language.**
+
 </div>
 
 ---
@@ -48,11 +50,11 @@ Upload an image, then simply say:
 
 Or add the theme you want:
 
-> Make 12 sarcastic reaction stickers from this character.
+> Make a sarcastic reaction sticker pack from this character.
 
 > Turn this pet photo into a work-chat meme pack.
 
-The result includes a preview image and `sticker-pack.zip`, containing 12 individual transparent PNGs.
+The result includes a preview and `sticker-pack.zip`, containing individual transparent PNG stickers.
 
 > [!IMPORTANT]
 > The host must support image generation or image editing and provide Python 3.10+. The first run may need to install NumPy and Pillow.
