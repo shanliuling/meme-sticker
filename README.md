@@ -28,6 +28,12 @@
   <a href="./assets/example-character.jpg"><img src="./assets/example-character.jpg" width="31%" alt="Character sticker example" /></a>
 </p>
 
+<p align="center">
+  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="22%" alt="Transparent selfie sticker saying OK" /></a>
+  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="22%" alt="Transparent cat sticker saying OK" /></a>
+  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="22%" alt="Transparent character sticker saying NICE" /></a>
+</p>
+
 <div align="center">
 
 **Selfies · Pets · Characters · Toys · Mascots · Objects**

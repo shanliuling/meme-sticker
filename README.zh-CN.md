@@ -28,6 +28,12 @@
   <a href="./assets/example-character.jpg"><img src="./assets/example-character.jpg" width="31%" alt="角色表情包效果" /></a>
 </p>
 
+<p align="center">
+  <a href="./assets/sticker-ok-selfie.png"><img src="./assets/sticker-ok-selfie.png" width="22%" alt="透明背景自拍 OK 表情" /></a>
+  <a href="./assets/sticker-ok-cat.png"><img src="./assets/sticker-ok-cat.png" width="22%" alt="透明背景猫咪 OK 表情" /></a>
+  <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="22%" alt="透明背景角色 NICE 表情" /></a>
+</p>
+
 <div align="center">
 
 **自拍 · 宠物 · 二次元 / 游戏角色 · 玩偶 · 吉祥物 · 物体**
