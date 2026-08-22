@@ -6,8 +6,6 @@
 
 **Turn pets, selfies, characters, toys — almost anything — into a complete AI chat sticker pack.**
 
-一张图进去，12 张能用的表情包出来。
-
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
