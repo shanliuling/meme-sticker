@@ -17,6 +17,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![LINUX DO](https://img.shields.io/badge/LINUX%20DO-社区友链-555?style=flat)](https://linux.do/)
 
 **English** · [简体中文](./README.zh-CN.md)
 
