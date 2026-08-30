@@ -8,19 +8,13 @@
   <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="18%" alt="Transparent character sticker saying NICE" /></a>
 </p>
 
-### One image → a complete AI sticker pack.
+### One image → a full sticker pack.
 
-**Turn pets, selfies, characters, toys — almost anything — into a complete set of chat stickers.**
+**An open-source sticker-making Skill for any Agent — not tied to one model or platform.**
 
-**MemeSticker is not tied to any fixed model or platform. It is an open-source Skill you can install into any Agent.**
+Generate the whole pack in one image call, then auto-split, remove backgrounds, and export transparent PNGs.
 
-As long as the host supports Skills and image generation/editing, MemeSticker can turn one source image into a complete sticker pack.
-
-⚡ **One generation → a full sticker pack**  
-💰 **Uses fewer image-generation credits than generating stickers one by one**  
-✂️ **Automatically splits the generated sheet into individual stickers**  
-🪄 **Automatically removes backgrounds and exports transparent PNGs**  
-📦 **Outputs a preview plus a ready-to-use `sticker-pack.zip`**
+**One generation · Fewer credits · Auto split · Transparent PNG**
 
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -39,33 +33,9 @@ As long as the host supports Skills and image generation/editing, MemeSticker ca
 
 ## ✨ Why MemeSticker?
 
-Most AI sticker workflows generate stickers one by one. MemeSticker takes a different approach:
-
-```text
-1 source image
-      ↓
-1 image-generation call
-      ↓
-a complete sticker sheet
-      ↓
-automatic splitting + background removal
-      ↓
-individual transparent PNG stickers
-```
-
-That makes the workflow faster, easier to automate, and more credit-efficient.
-
-### Built for Agents, not one model
-
-MemeSticker is a Skill rather than a model-specific sticker feature. You can take the same workflow to compatible Agents instead of rebuilding it around one image provider or one chat product.
-
-### Generate the whole pack at once
-
-Instead of spending one generation on every sticker, MemeSticker asks the image model to create a complete sheet in one call, then handles the rest locally.
-
-### Automatic post-processing
-
-After generation, MemeSticker automatically splits the sheet, removes backgrounds, and exports individual transparent PNG files together with a preview and ZIP package.
+- **Agent-native** — install the Skill and reuse the same workflow across compatible Agents.
+- **One call, full pack** — generate a complete sticker sheet instead of spending one image call per sticker.
+- **Ready to use** — splitting, background removal, transparent PNG export, preview and ZIP are handled automatically.
 
 ---
 
