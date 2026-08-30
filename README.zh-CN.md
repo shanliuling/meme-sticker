@@ -8,19 +8,13 @@
   <a href="./assets/sticker-nice-character.png"><img src="./assets/sticker-nice-character.png" width="18%" alt="透明背景角色 NICE 表情" /></a>
 </p>
 
-### 一张图 → 一整套 AI 表情包。
-
-**宠物、自拍、角色、玩偶，几乎任何主体都能变成一整套聊天表情。**
+### 一张图 → 一整套表情包。
 
 **MemeSticker 不是绑定某个固定模型的表情包功能，而是一个可以安装到任意 Agent 中的开源 Skill。**
 
-只要宿主支持 Skills + 图片生成 / 编辑能力，就可以把一张素材图直接变成完整表情包。
+一次生图生成整套，后续自动拆图、去背景并导出透明 PNG。
 
-⚡ **一次生图生成整套表情**  
-💰 **比逐张生成更省生图额度**  
-✂️ **自动拆分每一张表情**  
-🪄 **自动去背景并输出透明 PNG**  
-📦 **最终生成预览图 + `sticker-pack.zip`**
+**一次生成 · 更省额度 · 自动拆图 · 透明 PNG**
 
 [![GitHub stars](https://img.shields.io/github/stars/shanliuling/meme-sticker?style=flat)](https://github.com/shanliuling/meme-sticker/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -38,33 +32,9 @@
 
 ## ✨ 为什么是 MemeSticker？
 
-很多 AI 表情包工具是一张一张生成，MemeSticker 走的是另一条路线：
-
-```text
-1 张素材图
-    ↓
-1 次生图调用
-    ↓
-生成完整表情包大图
-    ↓
-自动拆图 + 自动去背景
-    ↓
-输出多张独立透明 PNG
-```
-
-这样做更快，也更适合自动化，同时能明显减少逐张生成带来的生图额度消耗。
-
-### 不绑定某个模型或平台
-
-MemeSticker 是一个 Skill，而不是某个固定模型自带的表情包功能。只要 Agent 宿主支持 Skills 和图片生成 / 编辑能力，就可以复用同一套表情包工作流，不需要围绕某一个模型或聊天产品重新做一遍。
-
-### 一次生成整套
-
-不需要为每一张表情分别调用一次生图模型。MemeSticker 会先让图片模型一次生成完整表情包，再在本地完成后续处理。
-
-### 自动完成后处理
-
-生成完成后，MemeSticker 会自动拆分表情、去除背景，并输出独立透明 PNG，同时生成预览图和 ZIP 压缩包。
+- **面向 Agent** — 安装 Skill 后，可以在兼容的 Agent 里复用同一套表情包工作流。
+- **一次生成整套** — 不需要一张张调用生图模型，更省生图额度。
+- **自动完成后处理** — 自动拆图、去背景、导出透明 PNG，并生成预览图和 ZIP。
 
 ---
 
